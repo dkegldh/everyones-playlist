@@ -38,7 +38,7 @@ public class Content extends BaseTimeEntity {
   @Column(name = "watcher_count", nullable = false)
   private long watcherCount = 0L;
 
-  public Content(ContentType type, String title, String description, String thumbnailUrl) {
+  private Content(ContentType type, String title, String description, String thumbnailUrl) {
     this.type = type;
     this.title = title;
     this.description = description;
