@@ -4,8 +4,8 @@ import com.jin.everyonesplaylist.domain.user.dto.request.UserCreateRequest;
 import com.jin.everyonesplaylist.domain.user.dto.request.UserUpdateRequest;
 import com.jin.everyonesplaylist.domain.user.dto.response.UserDto;
 import com.jin.everyonesplaylist.domain.user.entity.User;
-import com.jin.everyonesplaylist.domain.user.exception.DuplicateEmailException;
-import com.jin.everyonesplaylist.domain.user.exception.UserNotFoundException;
+import com.jin.everyonesplaylist.domain.user.exception.UserErrorCode;
+import com.jin.everyonesplaylist.domain.user.exception.UserException;
 import com.jin.everyonesplaylist.domain.user.repository.UserRepository;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
@@ -54,6 +54,6 @@ public class UserService {
 
   private User findUserOrThrow(UUID userId) {
     return userRepository.findById(userId)
-        .orElseThrow(() -> ); // TODO: 예외처리 추가 후 수정예정
+        .orElseThrow(() -> new UserException(UserErrorCode.USER_NOT_FOUND));
   }
 }
