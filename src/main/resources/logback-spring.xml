@@ -33,7 +33,7 @@
       <appender-ref ref="CONSOLE"/>
       <appender-ref ref="FILE"/>
     </root>
-    <logger name="com.codeit.mople" level="DEBUG"/>
+    <logger name="com.jin.everyonesplaylist" level="DEBUG"/>
   </springProfile>
 
   <!-- 테스트: 콘솔만, 노이즈 최소화 -->
@@ -41,7 +41,7 @@
     <root level="WARN">
       <appender-ref ref="CONSOLE"/>
     </root>
-    <logger name="com.codeit.mople" level="INFO"/>
+    <logger name="com.jin.everyonesplaylist" level="INFO"/>
   </springProfile>
 
   <!-- 운영: 콘솔 + 파일 -->
@@ -58,6 +58,6 @@
       <appender-ref ref="CONSOLE"/>
       <appender-ref ref="FILE"/>
     </root>
-    <logger name="com.codeit.mople" level="INFO"/>
+    <logger name="com.jin.everyonesplaylist" level="INFO"/>
   </springProfile>
 </configuration>
